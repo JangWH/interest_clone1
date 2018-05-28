@@ -8,12 +8,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <%= render 'shared/navigation' %>
     <% if flash[:notice] %>
-      <p class="notice"><%= notice %></p>
+      <div class="alert alert-primary"><%= notice %></div>
     <% end %>
     <% if flash[:alert] %>
-      <p class="alert"><%= alert %></p>
+      <div class="alert alert-danger"><%= alert %></div>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
