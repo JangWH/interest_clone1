@@ -1,0 +1,7 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<% if user_signed_in? %>
+  <%= link_to "프로필 편집", edit_user_registration_path %> | <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "로그인", new_user_session_path %> | <%= link_to "회원가입", new_user_registration_path %>
+<% end %>
