@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row pinterest-grid">
   <% @pins.each do |pin| %>
-    <div class="col-md-3">
+    <div class="col-md-3 pin-item">
       <div class="card pin">
-        <% if pin.image.attached? %>
-          <%= link_to (image_tag pin.image, class: "img-fluid card-img-top"), pin %>
+        <% if pin.pin_image.attached? %>
+          <%= link_to (image_tag pin.pin_image, class: "img-fluid card-img-top"), pin %>
         <% else %>
         <%end %>
         <div class="card-body">
